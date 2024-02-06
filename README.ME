@@ -1,0 +1,97 @@
+# Why I've chosen Python as a lenguage
+
+The reason it's very simple. For creating things from scratch is the easiest lenguage and requires the least amount of setup to perform in order to execute a script.
+Also I'm leaning python for automation, so that allowed me to write the code in a short amount of time. 
+
+# Web Scraping Test using Selenium and Python
+
+This project demonstrates a basic web scraping test using Selenium and Python. The test is designed to navigate to a website, interact with it, and extract information.
+
+## Test Overview
+
+The test performs the following actions:
+
+1. Opens a Chrome browser.
+2. Maximizes the browser window.
+3. Navigates to the website: [https://bcncgroup.com/](https://bcncgroup.com/).
+4. Waits for 5 seconds to allow the page to load.
+5. Accepts the cookies prompt by clicking on the cookie button.
+6. Navigates to the 'Who We Are' section.
+7. Waits for the 'Who We Are' page to fully load.
+8. Extracts all text from the CSS element 'div.page__content.js-page'.
+9. Logs the results to a text file.
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Python (3.x)
+- Selenium library (`pip install selenium`)
+- ChromeDriver (compatible with your Chrome browser version)
+
+#API TEST
+
+## Test Overview
+
+The test script performs the following actions:
+
+1. Sends a GET request to the API endpoint: [https://jsonplaceholder.typicode.com/albums](https://jsonplaceholder.typicode.com/albums).
+2. Retrieves the response data.
+3. Validates the response by checking the text of the first five elements.
+4. Logs the validation results.
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Python (3.x)
+- Requests library (`pip install requests`)
+
+# OAuth 2.0 Authentication with Python
+
+This project demonstrates OAuth 2.0 authentication using Python. The script interacts with an OAuth 2.0 server, obtaining access tokens using the Authorization Code and Client Credentials grant types.
+
+## Grant Types
+
+### Authorization Code Flow
+
+The Authorization Code Flow involves the following steps:
+
+1. Redirecting the user to the authorization server.
+2. Obtaining authorization from the user.
+3. Exchanging the authorization code for an access token.
+
+### Client Credentials Flow
+
+The Client Credentials Flow is used when the client application is the resource owner. It involves obtaining an access token directly by authenticating with the authorization server.
+
+## Prerequisites
+
+Make sure you have the following installed:
+
+- Python (3.x)
+- Requests library (`pip install requests`)
+
+##Configuration
+
+Authorization Code Flow
+AUTHORIZATION_URL: The authorization endpoint URL.
+TOKEN_URL: The token endpoint URL.
+CLIENT_ID: The client ID assigned by the authorization server.
+CLIENT_SECRET: The client secret assigned by the authorization server.
+REDIRECT_URI: The redirection URI where the authorization server sends the user after authorization.
+SCOPE: The scope of the access request.
+
+Client Credentials Flow
+TOKEN_URL: The token endpoint URL.
+CLIENT_ID: The client ID assigned by the authorization server.
+CLIENT_SECRET: The client secret assigned by the authorization server.
+SCOPE: The scope of the access request.
+Results
+The script will print the obtained access token and any relevant details from the API response.
+
+## BDD
+
+GIVEN an text (TBD)
+WHEN I make the call to the https://jsonplaceholder.typicode.com/albums
+THEN I verify if the text matches at least the first five records returned

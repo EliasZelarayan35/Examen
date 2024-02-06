@@ -1,4 +1,4 @@
-# Why I've chosen Python as a lenguage
+# Why I've chosen Python as a language
 
 The reason it's very simple. For creating things from scratch is the easiest lenguage and requires the least amount of setup to perform in order to execute a script.
 Also I'm leaning python for automation, so that allowed me to write the code in a short amount of time. 
@@ -47,51 +47,36 @@ Make sure you have the following installed:
 - Python (3.x)
 - Requests library (`pip install requests`)
 
-# OAuth 2.0 Authentication with Python
+# OAuth 2.0 API Testing with Python
 
-This project demonstrates OAuth 2.0 authentication using Python. The script interacts with an OAuth 2.0 server, obtaining access tokens using the Authorization Code and Client Credentials grant types.
+This project demonstrates how to test an OAuth 2.0 protected API using Python. The script supports authentication using both Client Credentials and Authorization Code grant types.
 
-## Grant Types
+## Authentication Flows
 
-### Authorization Code Flow
+The script supports the following OAuth 2.0 authentication flows:
 
-The Authorization Code Flow involves the following steps:
+1. **Client Credentials Flow**: Used when the client application is the resource owner. It involves obtaining an access token directly by authenticating with the authorization server using client credentials.
 
-1. Redirecting the user to the authorization server.
-2. Obtaining authorization from the user.
-3. Exchanging the authorization code for an access token.
-
-### Client Credentials Flow
-
-The Client Credentials Flow is used when the client application is the resource owner. It involves obtaining an access token directly by authenticating with the authorization server.
+2. **Authorization Code Flow**: Involves redirecting the user to the authorization server, obtaining authorization, and then exchanging the authorization code for an access token.
 
 ## Prerequisites
 
-Make sure you have the following installed:
+Before running the script, ensure you have the following:
 
 - Python (3.x)
-- Requests library (`pip install requests`)
+- `requests` library (install via `pip install requests`)
+- Access to an OAuth 2.0 server with appropriate configurations (e.g., token endpoint URLs, client IDs, client secrets, etc.)
 
-##Configuration
+## Usage
 
-Authorization Code Flow
-AUTHORIZATION_URL: The authorization endpoint URL.
-TOKEN_URL: The token endpoint URL.
-CLIENT_ID: The client ID assigned by the authorization server.
-CLIENT_SECRET: The client secret assigned by the authorization server.
-REDIRECT_URI: The redirection URI where the authorization server sends the user after authorization.
-SCOPE: The scope of the access request.
+1. Configure the authentication parameters in the script according to your OAuth 2.0 server setup.
+2. Run the script using Python:
 
-Client Credentials Flow
-TOKEN_URL: The token endpoint URL.
-CLIENT_ID: The client ID assigned by the authorization server.
-CLIENT_SECRET: The client secret assigned by the authorization server.
-SCOPE: The scope of the access request.
-Results
-The script will print the obtained access token and any relevant details from the API response.
+in bash run python oauth_api_test.py
 
 ## BDD
 
 GIVEN an text (TBD)
+AND OAuth 2.0 headers
 WHEN I make the call to the https://jsonplaceholder.typicode.com/albums
 THEN I verify if the text matches at least the first five records returned
